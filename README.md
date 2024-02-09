@@ -10,7 +10,7 @@
 **
 
 ## Recomendaciones
-`**En algunos casos de prueba, puede ser necesario cambiar la dirección de correo electrónico, ya que su uso repetido podría causar fallos en las pruebas. Además, se recomienda eliminar la carpeta allure-results antes de cada ejecución, ya que cada nueva ejecución guarda los informes anteriores, lo que podría generar confusión o redundancia en los resultados.**`
+**Debes primero instalas todas las dependencias con ** - npm i - ** para no encontrar errores, En algunos casos de prueba, puede ser necesario cambiar la dirección de correo electrónico, ya que su uso repetido podría causar fallos en las pruebas. Además, se recomienda eliminar la carpeta allure-results antes de cada ejecución, ya que cada nueva ejecución guarda los informes anteriores, lo que podría generar confusión o redundancia en los resultados.**`
 
 **Es importante seguir estos pasos para mantener la integridad y la precisión de las pruebas.**
 
@@ -23,13 +23,21 @@
 ```
 npx wdio run wdio.conf.js
 ```
+**Para ejecutar el reporte con allure:**
 
-**Puedes encontrar la configuración del proyecto en el archivo `wdio.conf.js`. Además, en la sección `specs`, puedes especificar si deseas ejecutar todas las pruebas o solo una específica.
+```
+allure open
+```
+
+**Puedes encontrar la configuración del proyecto en el archivo `wdio.conf.js`. Además, en la sección `specs` adicciona ```  "./test/specs/**/*.js"``` para ejecutar las pruebas, puedes especificar si deseas ejecutar todas las pruebas o solo una específica.
 Para habilitar la ejecución en paralelo, simplemente elimina los comentarios (`/* */`) correspondientes en el archivo de configuración, y las pruebas se ejecutarán en paralelo.**
 
 
+
+
 ```
-git remote add origin https://github.com/Yapcc00/WebDriverIO-POM.git
-git branch -M master
-git push -u origin master
+cd existing_repo
+git remote add origin https://gitlab.com/Yapcc00/puebatecnica.git
+git branch -M main
+git push -uf origin main
 ```
