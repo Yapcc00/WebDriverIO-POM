@@ -10,8 +10,7 @@ describe("Crear pagina registro de usuarios", () => {
   });
 
   it("Registro de usuario en el sitio web: Ruta Alternativa", async () => {
-    await RegisterPage.txtEmail.setValue("pruebatecnica3aa
-    @gmail.com");
+    await RegisterPage.txtEmail.setValue("pruebatecnica3aa@gmail.com");
     await RegisterPage.btnAcccount.click();
     await browser.setTimeout({ implicit: 10000 });
     (await RegisterPage.selected).isSelected;
